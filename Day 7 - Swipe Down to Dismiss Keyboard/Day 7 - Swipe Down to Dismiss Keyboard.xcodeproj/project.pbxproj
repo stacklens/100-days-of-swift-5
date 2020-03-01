@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49BA8682240B2E8300EDFF8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA8681240B2E8300EDFF8D /* AppDelegate.swift */; };
+		49BA8684240B2E8300EDFF8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA8683240B2E8300EDFF8D /* SceneDelegate.swift */; };
+		49BA8686240B2E8300EDFF8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA8685240B2E8300EDFF8D /* ViewController.swift */; };
+		49BA8689240B2E8300EDFF8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BA8687240B2E8300EDFF8D /* Main.storyboard */; };
+		49BA868B240B2E8700EDFF8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BA868A240B2E8700EDFF8D /* Assets.xcassets */; };
+		49BA868E240B2E8700EDFF8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BA868C240B2E8700EDFF8D /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		49BA867E240B2E8300EDFF8D /* Day 7 - Swipe Down to Dismiss Keyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Day 7 - Swipe Down to Dismiss Keyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49BA8681240B2E8300EDFF8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49BA8683240B2E8300EDFF8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		49BA8685240B2E8300EDFF8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49BA8688240B2E8300EDFF8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49BA868A240B2E8700EDFF8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49BA868D240B2E8700EDFF8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		49BA868F240B2E8700EDFF8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49BA867B240B2E8300EDFF8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49BA8675240B2E8300EDFF8D = {
+			isa = PBXGroup;
+			children = (
+				49BA8680240B2E8300EDFF8D /* Day 7 - Swipe Down to Dismiss Keyboard */,
+				49BA867F240B2E8300EDFF8D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49BA867F240B2E8300EDFF8D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49BA867E240B2E8300EDFF8D /* Day 7 - Swipe Down to Dismiss Keyboard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49BA8680240B2E8300EDFF8D /* Day 7 - Swipe Down to Dismiss Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				49BA8681240B2E8300EDFF8D /* AppDelegate.swift */,
+				49BA8683240B2E8300EDFF8D /* SceneDelegate.swift */,
+				49BA8685240B2E8300EDFF8D /* ViewController.swift */,
+				49BA8687240B2E8300EDFF8D /* Main.storyboard */,
+				49BA868A240B2E8700EDFF8D /* Assets.xcassets */,
+				49BA868C240B2E8700EDFF8D /* LaunchScreen.storyboard */,
+				49BA868F240B2E8700EDFF8D /* Info.plist */,
+			);
+			path = "Day 7 - Swipe Down to Dismiss Keyboard";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49BA867D240B2E8300EDFF8D /* Day 7 - Swipe Down to Dismiss Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49BA8692240B2E8700EDFF8D /* Build configuration list for PBXNativeTarget "Day 7 - Swipe Down to Dismiss Keyboard" */;
+			buildPhases = (
+				49BA867A240B2E8300EDFF8D /* Sources */,
+				49BA867B240B2E8300EDFF8D /* Frameworks */,
+				49BA867C240B2E8300EDFF8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Day 7 - Swipe Down to Dismiss Keyboard";
+			productName = "Day 7 - Swipe Down to Dismiss Keyboard";
+			productReference = 49BA867E240B2E8300EDFF8D /* Day 7 - Swipe Down to Dismiss Keyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49BA8676240B2E8300EDFF8D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Du Sai";
+				TargetAttributes = {
+					49BA867D240B2E8300EDFF8D = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 49BA8679240B2E8300EDFF8D /* Build configuration list for PBXProject "Day 7 - Swipe Down to Dismiss Keyboard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49BA8675240B2E8300EDFF8D;
+			productRefGroup = 49BA867F240B2E8300EDFF8D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49BA867D240B2E8300EDFF8D /* Day 7 - Swipe Down to Dismiss Keyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49BA867C240B2E8300EDFF8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49BA868E240B2E8700EDFF8D /* LaunchScreen.storyboard in Resources */,
+				49BA868B240B2E8700EDFF8D /* Assets.xcassets in Resources */,
+				49BA8689240B2E8300EDFF8D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49BA867A240B2E8300EDFF8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49BA8686240B2E8300EDFF8D /* ViewController.swift in Sources */,
+				49BA8682240B2E8300EDFF8D /* AppDelegate.swift in Sources */,
+				49BA8684240B2E8300EDFF8D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		49BA8687240B2E8300EDFF8D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49BA8688240B2E8300EDFF8D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		49BA868C240B2E8700EDFF8D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49BA868D240B2E8700EDFF8D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49BA8690240B2E8700EDFF8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49BA8691240B2E8700EDFF8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49BA8693240B2E8700EDFF8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GP82W3YVGV;
+				INFOPLIST_FILE = "Day 7 - Swipe Down to Dismiss Keyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dusaiphoto.Day-7---Swipe-Down-to-Dismiss-Keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49BA8694240B2E8700EDFF8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GP82W3YVGV;
+				INFOPLIST_FILE = "Day 7 - Swipe Down to Dismiss Keyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dusaiphoto.Day-7---Swipe-Down-to-Dismiss-Keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49BA8679240B2E8300EDFF8D /* Build configuration list for PBXProject "Day 7 - Swipe Down to Dismiss Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49BA8690240B2E8700EDFF8D /* Debug */,
+				49BA8691240B2E8700EDFF8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49BA8692240B2E8700EDFF8D /* Build configuration list for PBXNativeTarget "Day 7 - Swipe Down to Dismiss Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49BA8693240B2E8700EDFF8D /* Debug */,
+				49BA8694240B2E8700EDFF8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49BA8676240B2E8300EDFF8D /* Project object */;
+}
