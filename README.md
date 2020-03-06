@@ -56,3 +56,30 @@ What I Learned:
 
 - UIImagePickerController
 - Scale image and append it to TextField
+
+## Day 9 - Pull to Refresh TabelView
+
+What I Learned:
+
+- Hot to refresh data
+
+## Day 10 - Add New Item
+
+What I Learned:
+
+- How to show keyboard when view appear
+- How to pass data back to view controller by closure
+
+## Day 11 - Sticky Section Headers
+
+What I Learned:
+
+- Build sticky section tableview
+- Use Array to index Dictionary
+
+## Day 12 - Tableview Jumpbar
+
+What I Learned:
+
+- How to config dataSource
+- Learn Create an Indexed Table View

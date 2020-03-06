@@ -11,43 +11,30 @@ import UIKit
 class AddNewItemViewController: UIViewController, UITextFieldDelegate
 {
     
-    
     @IBOutlet weak var textField: UITextField! {
         didSet {
             textField.delegate = self
         }
     }
-        
+    
+    // Send message from this contrller to TableViewController by Closure.
+    // Also can send message back by Delegate.
+    var addItemHandler: ((String) -> ())?
+    // This function would call when user press Return Key.
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        return true
-    }
-    
-    
-    var addItemHandler: ((String) -> ())?
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
         if let text = textField.text, text != "" {
             addItemHandler?(text)
             navigationController?.popViewController(animated: true)
         }
+        return true
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         textField.becomeFirstResponder()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
