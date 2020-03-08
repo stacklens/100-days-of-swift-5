@@ -19,23 +19,36 @@ class ContactTableViewCell: UITableViewCell {
 class ContactTableViewController: UITableViewController {
     
     // Model load here.
-    var friends: [Friend] = Friends.allFriends(in: "dict") ?? []
+    var friends: [Friend] = Friends.allFriends(in: "dict") ?? [] {
+        didSet {
+            Friends.save(by: friends, in: "dict")
+            print("FriendsSaved")
+        }
+    }
     
     let sectionTitle = ["Recent", "Friends"]
     lazy var recentFriendsCount = friends.prefix(2).count
     
-    private func printFriendsName() {
-        print("--------------")
-        for friend in friends {
-            print(friend.name)
+    // Raw friends data is in bundle.main.path -> dict.json
+    // When app first start, raw friends data will copy to document dir -> dict.json
+    // If this IBAction tapped, data in document will be refreshed from bundle.main.path again.
+    @IBAction func refreshDataFromDict(_ sender: UIBarButtonItem) {
+        if let fileURL = Friends.documentFileURL {
+            if let reloadedData = Friends.copyDataToDoc(from: "dict", to: fileURL) {
+                friends = reloadedData
+                tableView.reloadData()
+            }
         }
-        print(friends.count)
-        print("--------------")
     }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -116,7 +129,6 @@ class ContactTableViewController: UITableViewController {
             nvc.saveFirendData = { [weak self] friend in
                 if let index = friend.index, self != nil {
                     self!.friends.replaceSubrange(index ..< index + 1, with: [friend])
-                    Friends.save(by: self!.friends, in: "dict2")
                 }
             }
         }

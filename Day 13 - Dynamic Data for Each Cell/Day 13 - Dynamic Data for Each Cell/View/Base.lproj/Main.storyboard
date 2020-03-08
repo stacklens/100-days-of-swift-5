@@ -69,7 +69,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="v6D-LU-J2g">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1yw-0B-ung"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="1yw-0B-ung"/>
+                            <barButtonItem systemItem="refresh" id="WHa-Y0-OcR">
+                                <connections>
+                                    <action selector="refreshDataFromDict:" destination="VjL-rc-xBU" id="92j-rT-VM6"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <segue destination="QNs-oa-1qb" kind="show" identifier="Contact Detail" id="2Ad-4U-SjI"/>
