@@ -6,6 +6,9 @@
 //  Copyright © 2020 Du Sai. All rights reserved.
 //
 
+// This app based on IQKeyboardManager framework.
+// Please open this app through 'Day 13 - Dynamic Data for Each Cell.xcworkspace'.
+
 import UIKit
 
 class ContactTableViewCell: UITableViewCell {
@@ -64,9 +67,9 @@ class ContactTableViewController: UITableViewController {
         let friend = friends[index]
         cell.name.text = friend.name
         cell.avatar.image = UIImage(named: friend.avatar)
-        if let image = cell.avatar.image {
-            cell.avatar.layer.cornerRadius = image.size.width / 2
-        }
+        // circelCorner is an extension of UIImageView
+        // can get an circle corner radius imageView
+        cell.avatar.circleCorner()
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -96,7 +99,9 @@ class ContactTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let friend = friends[indexPath.section * recentFriendsCount + indexPath.row]
+        let index = indexPath.section * recentFriendsCount + indexPath.row
+        var friend = friends[index]
+        friend.index = index
         performSegue(withIdentifier: "Contact Detail", sender: friend)
     }
 
@@ -108,6 +113,12 @@ class ContactTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "Contact Detail", let nvc = segue.destination as? ContactDetailViewController {
             nvc.friend = sender as? Friend
+            nvc.saveFirendData = { [weak self] friend in
+                if let index = friend.index, self != nil {
+                    self!.friends.replaceSubrange(index ..< index + 1, with: [friend])
+                    Friends.save(by: self!.friends, in: "dict2")
+                }
+            }
         }
     }
 

@@ -20,4 +20,20 @@ struct Friends: Codable {
         }
         return nil
     }
+    
+    static func save(by friends: [Friend], in file: String) {
+        if let path = Bundle.main.path(forResource: file, ofType: "json") {
+            if let jsonData = try? JSONEncoder().encode(friends) {
+                if let jsonString = String(data: jsonData, encoding: .utf8) {
+                    do {
+                        let url = URL(fileURLWithPath: path)
+                        print(url)
+                        try jsonString.write(to: url, atomically: true, encoding: .utf8)
+                    } catch {
+                        print(Error.self)
+                    }
+                }
+            }
+        }
+    }
 }

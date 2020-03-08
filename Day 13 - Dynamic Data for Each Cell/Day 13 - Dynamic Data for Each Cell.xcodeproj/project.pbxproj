@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,9 +17,13 @@
 		49BA8767241073B500EDFF8D /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA8766241073B500EDFF8D /* Friend.swift */; };
 		49BA876C2411333600EDFF8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BA876B2411333600EDFF8D /* Assets.xcassets */; };
 		49BA876E24120D4C00EDFF8D /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA876D24120D4C00EDFF8D /* ContactDetailViewController.swift */; };
+		49BA87702413505E00EDFF8D /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA876F2413505E00EDFF8D /* UIImageExtension.swift */; };
+		49BA87732414759200EDFF8D /* backup.json in Resources */ = {isa = PBXBuildFile; fileRef = 49BA87712413C6B100EDFF8D /* backup.json */; };
+		E5B882CE7327EEAA2030158C /* Pods_Day_13___Dynamic_Data_for_Each_Cell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883CA450DF26A3E11E7DF497 /* Pods_Day_13___Dynamic_Data_for_Each_Cell.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		013D3F82F957B41B0E808C06 /* Pods-Day 13 - Dynamic Data for Each Cell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Day 13 - Dynamic Data for Each Cell.release.xcconfig"; path = "Target Support Files/Pods-Day 13 - Dynamic Data for Each Cell/Pods-Day 13 - Dynamic Data for Each Cell.release.xcconfig"; sourceTree = "<group>"; };
 		49BA8748240FDE3A00EDFF8D /* Day 13 - Dynamic Data for Each Cell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Day 13 - Dynamic Data for Each Cell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BA874B240FDE3A00EDFF8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49BA874D240FDE3A00EDFF8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +36,10 @@
 		49BA8766241073B500EDFF8D /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		49BA876B2411333600EDFF8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../100-days-of-RxSwift/18-DynamicDataForEachCell/Contacts/Assets.xcassets"; sourceTree = "<group>"; };
 		49BA876D24120D4C00EDFF8D /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		49BA876F2413505E00EDFF8D /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		49BA87712413C6B100EDFF8D /* backup.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = backup.json; sourceTree = "<group>"; };
+		4FEF6E1F6D14428A6B075E56 /* Pods-Day 13 - Dynamic Data for Each Cell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Day 13 - Dynamic Data for Each Cell.debug.xcconfig"; path = "Target Support Files/Pods-Day 13 - Dynamic Data for Each Cell/Pods-Day 13 - Dynamic Data for Each Cell.debug.xcconfig"; sourceTree = "<group>"; };
+		883CA450DF26A3E11E7DF497 /* Pods_Day_13___Dynamic_Data_for_Each_Cell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Day_13___Dynamic_Data_for_Each_Cell.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +47,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B882CE7327EEAA2030158C /* Pods_Day_13___Dynamic_Data_for_Each_Cell.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DAC1AA1F9E762986DC01DFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				883CA450DF26A3E11E7DF497 /* Pods_Day_13___Dynamic_Data_for_Each_Cell.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		49BA873F240FDE3A00EDFF8D = {
 			isa = PBXGroup;
 			children = (
 				49BA874A240FDE3A00EDFF8D /* Day 13 - Dynamic Data for Each Cell */,
 				49BA8749240FDE3A00EDFF8D /* Products */,
+				C9AF9B756367933043A511AD /* Pods */,
+				1DAC1AA1F9E762986DC01DFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,9 +86,11 @@
 				49BA8768241073C600EDFF8D /* Controller */,
 				49BA8769241073D000EDFF8D /* Model */,
 				49BA876A241073D900EDFF8D /* View */,
-				49BA8761240FE28200EDFF8D /* dict.json */,
-				49BA8759240FDE3F00EDFF8D /* Info.plist */,
 				49BA8763240FE36900EDFF8D /* Supporting Files */,
+				49BA8761240FE28200EDFF8D /* dict.json */,
+				49BA87712413C6B100EDFF8D /* backup.json */,
+				49BA8759240FDE3F00EDFF8D /* Info.plist */,
+				49BA876F2413505E00EDFF8D /* UIImageExtension.swift */,
 			);
 			path = "Day 13 - Dynamic Data for Each Cell";
 			sourceTree = "<group>";
@@ -111,6 +132,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C9AF9B756367933043A511AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FEF6E1F6D14428A6B075E56 /* Pods-Day 13 - Dynamic Data for Each Cell.debug.xcconfig */,
+				013D3F82F957B41B0E808C06 /* Pods-Day 13 - Dynamic Data for Each Cell.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49BA875C240FDE3F00EDFF8D /* Build configuration list for PBXNativeTarget "Day 13 - Dynamic Data for Each Cell" */;
 			buildPhases = (
+				B2AA7C9C2E0FDCC10D20F1E6 /* [CP] Check Pods Manifest.lock */,
 				49BA8744240FDE3A00EDFF8D /* Sources */,
 				49BA8745240FDE3A00EDFF8D /* Frameworks */,
 				49BA8746240FDE3A00EDFF8D /* Resources */,
+				06A2FFCF875CAA426E624434 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BA87732414759200EDFF8D /* backup.json in Resources */,
 				49BA8758240FDE3F00EDFF8D /* LaunchScreen.storyboard in Resources */,
 				49BA8762240FE28200EDFF8D /* dict.json in Resources */,
 				49BA8753240FDE3A00EDFF8D /* Main.storyboard in Resources */,
@@ -178,6 +211,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06A2FFCF875CAA426E624434 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Day 13 - Dynamic Data for Each Cell/Pods-Day 13 - Dynamic Data for Each Cell-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Day 13 - Dynamic Data for Each Cell/Pods-Day 13 - Dynamic Data for Each Cell-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Day 13 - Dynamic Data for Each Cell/Pods-Day 13 - Dynamic Data for Each Cell-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2AA7C9C2E0FDCC10D20F1E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Day 13 - Dynamic Data for Each Cell-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		49BA8744240FDE3A00EDFF8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -185,6 +260,7 @@
 			files = (
 				49BA8760240FDE7500EDFF8D /* ContactTableViewController.swift in Sources */,
 				49BA874C240FDE3A00EDFF8D /* AppDelegate.swift in Sources */,
+				49BA87702413505E00EDFF8D /* UIImageExtension.swift in Sources */,
 				49BA8767241073B500EDFF8D /* Friend.swift in Sources */,
 				49BA874E240FDE3A00EDFF8D /* SceneDelegate.swift in Sources */,
 				49BA876E24120D4C00EDFF8D /* ContactDetailViewController.swift in Sources */,
@@ -330,6 +406,7 @@
 		};
 		49BA875D240FDE3F00EDFF8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FEF6E1F6D14428A6B075E56 /* Pods-Day 13 - Dynamic Data for Each Cell.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -348,6 +425,7 @@
 		};
 		49BA875E240FDE3F00EDFF8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 013D3F82F957B41B0E808C06 /* Pods-Day 13 - Dynamic Data for Each Cell.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

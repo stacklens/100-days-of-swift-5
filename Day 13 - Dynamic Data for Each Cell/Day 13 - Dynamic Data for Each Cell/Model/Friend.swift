@@ -9,6 +9,9 @@
 import Foundation
 
 struct Friend: Codable {
+    
+    var index: Int?
+    
     var name: String
     var avatar: String
     var mobile: String
