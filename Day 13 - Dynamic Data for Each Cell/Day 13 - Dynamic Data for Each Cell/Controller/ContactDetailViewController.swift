@@ -17,7 +17,7 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate
         didSet {
             notes.isEditable = isTextFieldEditable
             if isTextFieldEditable {
-                notes.becomeFirstResponder()
+                name.becomeFirstResponder()
             } else {
                 if var friendObj = friend {
                     view.endEditing(true)

@@ -22,7 +22,7 @@ class ContactTableViewController: UITableViewController {
     var friends: [Friend] = Friends.allFriends(in: "dict") ?? [] {
         didSet {
             Friends.save(by: friends, in: "dict")
-            print("FriendsSaved")
+            tableView.reloadData()
         }
     }
     
@@ -39,6 +39,11 @@ class ContactTableViewController: UITableViewController {
                 tableView.reloadData()
             }
         }
+    }
+    
+    // Add new friend
+    @IBAction func addNewFriend(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "Contact Create", sender: sender)
     }
     
 
@@ -79,7 +84,7 @@ class ContactTableViewController: UITableViewController {
     private func setCellAttr(_ cell: ContactTableViewCell, at index: Int) {
         let friend = friends[index]
         cell.name.text = friend.name
-        cell.avatar.image = UIImage(named: friend.avatar)
+        cell.avatar.image = UIImage(named: friend.avatar ?? "avatar01")
         // circelCorner is an extension of UIImageView
         // can get an circle corner radius imageView
         cell.avatar.circleCorner()
@@ -129,6 +134,12 @@ class ContactTableViewController: UITableViewController {
             nvc.saveFirendData = { [weak self] friend in
                 if let index = friend.index, self != nil {
                     self!.friends.replaceSubrange(index ..< index + 1, with: [friend])
+                }
+            }
+        } else if segue.identifier == "Contact Create", let nvc = segue.destination as? ContactCreateViewController {
+            nvc.saveData = { [weak self] in
+                if let newFriend = nvc.newFriend {
+                    self?.friends.append(newFriend)
                 }
             }
         }
