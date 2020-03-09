@@ -83,3 +83,14 @@ What I Learned:
 
 - How to config dataSource
 - Learn Create an Indexed Table View
+
+## Day 13 - Dynamic Data for Each Cell
+
+What I Learned:
+
+- Comprehensive application for UITableViewController
+- Create/Update/Delete/Review Data in tableView
+- Read/Write json data to file
+- MVC design concept
+- Transmit information by segue/closure
+-  How to use CocoaPod to install frameworks
