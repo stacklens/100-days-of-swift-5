@@ -94,3 +94,15 @@ What I Learned:
 - MVC design concept
 - Transmit information by segue/closure
 -  How to use CocoaPod to install frameworks
+
+## Day 14 - Set Current Location
+
+What I Learned:
+
+- Get current location
+
+## Day 15 - Setting The Date
+
+What I Learned:
+
+- How to format date from DatePicker
