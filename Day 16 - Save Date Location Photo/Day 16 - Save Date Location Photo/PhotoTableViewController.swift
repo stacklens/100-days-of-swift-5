@@ -7,11 +7,60 @@
 //
 
 import UIKit
+import Photos
+import CoreLocation
 
-class PhotoTableViewController: UITableViewController {
+class PhotoTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    
+}
+
+class PhotoTableViewController: UITableViewController, CLLocationManagerDelegate
+{
+    
+    private var photoAssets = [PhotoAsset]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    private var locationManager: CLLocationManager?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let libraryStatus = PHPhotoLibrary.authorizationStatus()
+        switch libraryStatus {
+        case .denied, .restricted:
+            print("Library Authorization failed.")
+        case .authorized:
+            break
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization { (status) in
+                print("Library authorization ok.")
+            }
+        @unknown default:
+            print("Unknown default.")
+        }
+        
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        let locationStatus = CLLocationManager.authorizationStatus()
+        switch locationStatus {
+        case .denied, .restricted:
+            print("Error 0")
+        case .authorizedWhenInUse, .authorizedAlways:
+            break
+        case .notDetermined:
+            locationManager?.requestWhenInUseAuthorization()
+        default:
+            print("Unknown fail.")
+        }
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -24,23 +73,27 @@ class PhotoTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return photoAssets.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Photo Cell", for: indexPath) as! PhotoTableViewCell
 
         // Configure the cell...
+        let asset = photoAssets[indexPath.row]
+        cell.photoImageView.image = asset.image
+        cell.dateLabel.text = asset.dateString
+        cell.locationLabel.text = asset.locationString
+//        cell.dateLabel.text = asset.date?.formatToString(of: .full)
+//        cell.locationLabel.text = asset.location?.formatToString()
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -77,14 +130,19 @@ class PhotoTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "Add Asset",
+            let nvc = segue.destination as? AddNewAssetViewController
+        {
+            nvc.saveAssetHandler = { [weak self] in
+                self?.photoAssets.append(nvc.asset)
+            }
+        }
     }
-    */
 
 }

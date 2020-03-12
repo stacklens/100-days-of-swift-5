@@ -6,4 +6,11 @@
 //  Copyright © 2020 Du Sai. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+struct PhotoAsset {
+    var image: UIImage?
+    var dateString: String?
+    var locationString: String?
+    var note: String?
+}
