@@ -26,7 +26,7 @@ This project does not include an explanation of the basics of Swift. If you do n
 
 ### Day 1 - Tap Counter
 
-![gif](gif/day1.gif)
+![gif](GIF/day1.gif)
 
 What I Learned:
 
@@ -36,7 +36,7 @@ What I Learned:
 
 ### Day 2 - Tap Or Hold Counter
 
-![gif](gif/day2.gif)
+![gif](GIF/day2.gif)
 
 What I Learned:
 
@@ -44,7 +44,7 @@ What I Learned:
 
 ### Day 3 - Tip Calculator
 
-![gif](gif/day3.gif)
+![gif](GIF/day3.gif)
 
 What I Learned:
 
@@ -55,7 +55,7 @@ What I Learned:
 
 ### Day 4 - Basic Table View
 
-![gif](gif/day4.gif)
+![gif](GIF/day4.gif)
 
 - Build Custom Table View Controller
 - Work with Nav Bar Buttons
@@ -63,7 +63,7 @@ What I Learned:
 
 ### Day 5 - Getting Current Date and Time
 
-![gif](gif/day5.gif)
+![gif](GIF/day5.gif)
 
 What I Learned:
 
@@ -72,7 +72,7 @@ What I Learned:
 
 ### Day 6 - Passing Data to Another View
 
-![gif](gif/day6.gif)
+![gif](GIF/day6.gif)
 
 What I Learned:
 
@@ -80,7 +80,7 @@ What I Learned:
 
 ### Day 7 - Swipe Down to Dismiss Keyboard
 
-![gif](gif/day7.gif)
+![gif](GIF/day7.gif)
 
 What I Learned:
 
@@ -89,7 +89,7 @@ What I Learned:
 
 ### Day 8 - Add Photo from Camera Roll
 
-![gif](gif/day8.gif)
+![gif](GIF/day8.gif)
 
 What I Learned:
 
@@ -98,7 +98,7 @@ What I Learned:
 
 ### Day 9 - Pull to Refresh TabelView
 
-![gif](gif/day9.gif)
+![gif](GIF/day9.gif)
 
 What I Learned:
 
@@ -106,7 +106,7 @@ What I Learned:
 
 ### Day 10 - Add New Item
 
-![gif](gif/day10.gif)
+![gif](GIF/day10.gif)
 
 What I Learned:
 
@@ -115,7 +115,7 @@ What I Learned:
 
 ### Day 11 - Sticky Section Headers
 
-![gif](gif/day11.gif)
+![gif](GIF/day11.gif)
 
 What I Learned:
 
@@ -124,7 +124,7 @@ What I Learned:
 
 ### Day 12 - Tableview Jumpbar
 
-![gif](gif/day12.gif)
+![gif](GIF/day12.gif)
 
 What I Learned:
 
@@ -133,11 +133,11 @@ What I Learned:
 
 ### Day 13 - Dynamic Data for Each Cell
 
-![gif](gif/day13-1.gif)
+![gif](GIF/day13-1.gif)
 
-![gif](gif/day13-2.gif)
+![gif](GIF/day13-2.gif)
 
-![gif](gif/day13-3.gif)
+![gif](GIF/day13-3.gif)
 
 What I Learned:
 
@@ -150,7 +150,7 @@ What I Learned:
 
 ### Day 14 - Set Current Location
 
-![gif](gif/day14.gif)
+![gif](GIF/day14.gif)
 
 What I Learned:
 
@@ -158,7 +158,7 @@ What I Learned:
 
 ### Day 15 - Setting The Date
 
-![gif](gif/day15.gif)
+![gif](GIF/day15.gif)
 
 What I Learned:
 
@@ -166,7 +166,7 @@ What I Learned:
 
 ### Day 16 - Save Date Location Photo
 
-![gif](gif/day16.gif)
+![gif](GIF/day16.gif)
 
 What I Learned:
 
