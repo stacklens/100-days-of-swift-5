@@ -1,6 +1,7 @@
 [![](https://img.shields.io/badge/Swift-5.0-orange)](https://swift.org/)
 [![](https://img.shields.io/badge/Xcode-11.3.1-blue)](https://swift.org/)
 [![](https://img.shields.io/badge/Simulator-iPhone11-green)](https://swift.org/)
+[![](https://img.shields.io/badge/Simulator-iPhone11-blueviolet)](https://swift.org/)
 
 ## 100 Days of Swift 5
 
@@ -13,6 +14,7 @@ Code environment:
 - Swift 5
 - Xcode 11.3.1
 - Simulator iPhone 11
+- IOS 13.2
 
 This project does not include an explanation of the basics of Swift. If you do not understand how the code works, please learn the following tutorial first:
 
