@@ -190,3 +190,11 @@ What I Learned:
 - Drag and Drop in collection view
 - Change the layout of collection view
 - Basic animation
+
+## Day 18 - Drag and Drop Item Out of CollectionView
+
+![gif](GIF/day18.gif)
+
+What I Learned:
+
+- Pass data from collection to another view by drag and drop

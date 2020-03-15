@@ -7,7 +7,7 @@
 
 **超过16个 Swift 5 小项目，帮助入门者快速学习如何搭建 ios 。**
 
-项目灵感来源于 [samvlu's 100-days-of-swift.](http://samvlu.com/index.html), **并用 Swift 5 重写。** 部分资源来自 [Edison Hsu](https://github.com/Edison-Hsu/100-days-of-RxSwift)。
+项目灵感来源于 [samvlu's 100-days-of-swift](http://samvlu.com/index.html)，**并用 Swift 5 重写。** 部分资源来自 [Edison Hsu](https://github.com/Edison-Hsu/100-days-of-RxSwift)。
 
 开发环境：
 
@@ -188,3 +188,11 @@
 - 集合视图元素的拖拽
 - 改变集合视图的布局
 - 基本的动画
+
+## Day 18 - Drag and Drop Item Out of CollectionView
+
+![gif](GIF/day18.gif)
+
+我学到了：
+
+- 通过拖拽向另一个视图传递数据
