@@ -7,7 +7,7 @@
 
 **More than 16 tiny projects to help you quickly learn how to build a simple iPhone app.**
 
-👉🏼*[中文传送门 / Chinese Version](README-CN.md)*👈🏼
+👉🏼[中文传送门 / Chinese Version](README-CN.md)👈🏼
 
 Similar with [samvlu's 100-days-of-swift.](http://samvlu.com/index.html), **but write by Swift 5.** Some resource comes from [Edison Hsu](https://github.com/Edison-Hsu/100-days-of-RxSwift).
 
