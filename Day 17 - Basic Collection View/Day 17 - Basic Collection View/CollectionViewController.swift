@@ -14,13 +14,28 @@ class EmojiCell: UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
 }
 
-class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout
+class CollectionViewController: UICollectionViewController
 {
     
     private var emoji = "🍎🍐🍊🍋🍌🍉🍇🍓🍈🍒🍑🥭🍍🥥🥝🍆🥑🥦🥬".map { String($0) }
-
+    
+    private var waittingAddedEmoji = "🍠🥐🥨🥚🥞🥓🥩🍖🍟🍔🌭🦴🌯🥗🍤🍙🍚🥮🥧🍮🍭🍬🍪".map { String($0) }
+    
+    @IBAction func addNewEmojiButtonPressed(_ sender: UIBarButtonItem) {
+        if let poppedEmoji = waittingAddedEmoji.popLast() {
+            emoji.append(poppedEmoji)
+            collectionView.insertItems(at: [IndexPath(item: emoji.endIndex - 1, section: 0)])
+        } else {
+            print("No more emoji!")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.dragInteractionEnabled = true
+        collectionView.dragDelegate = self
+        collectionView.dropDelegate = self
     }
 
     /*
@@ -55,7 +70,108 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         return cell
     }
     
+//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        if let tappedCell = collectionView.cellForItem(at:indexPath) as? EmojiCell {
+//            tappedCell.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+//        }
+//    }
     
+    override func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        UIView.animate(withDuration: 0.5) {
+            if let cell = collectionView.cellForItem(at: indexPath) as? EmojiCell {
+                cell.label.transform = .init(scaleX: 0.6, y: 0.6)
+                cell.contentView.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+            }
+        }
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        UIView.animate(withDuration: 0.5) {
+            if let cell = collectionView.cellForItem(at: indexPath) as? EmojiCell {
+                cell.label.transform = .identity
+                cell.contentView.backgroundColor = .clear
+            }
+        }
+    }
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        cell.layer.cornerRadius = cell.bounds.width / 8
+        cell.alpha = 0
+        cell.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        UIView.animate(withDuration: 0.5) {
+            cell.alpha = 1
+            cell.transform = .identity
+        }
+    }
+    
+    
+}
+
+extension CollectionViewController: UICollectionViewDragDelegate, UICollectionViewDropDelegate {
+    
+    // MARK: - UICollectionViewDragDelegate
+    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        session.localContext = collectionView
+        return dragItems(at: indexPath)
+    }
+    
+    private func dragItems(at indexPath: IndexPath) -> [UIDragItem] {
+        if let attributedString = (collectionView.cellForItem(at: indexPath) as? EmojiCell)?.label.attributedText {
+            let dragItem = UIDragItem(itemProvider: NSItemProvider(object: attributedString))
+            dragItem.localObject = attributedString
+            return [dragItem]
+        } else {
+            return []
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, dragPreviewParametersForItemAt indexPath: IndexPath) -> UIDragPreviewParameters? {
+        let parameters = UIDragPreviewParameters()
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            let path = UIBezierPath.init(roundedRect: CGRect(origin: CGPoint(x: 0, y: 0), size: cell.bounds.size), cornerRadius: cell.bounds.midX)
+            parameters.visiblePath = path
+        }
+        return parameters
+    }
+    
+    
+    
+    // MARK: - UICollectionViewDropDelegate
+    func collectionView(_ collectionView: UICollectionView, canHandle session: UIDropSession) -> Bool {
+        return session.canLoadObjects(ofClass: NSAttributedString.self)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
+        if let indexPath = destinationIndexPath, indexPath.section == 0 {
+            return UICollectionViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
+        } else {
+            return UICollectionViewDropProposal(operation: .cancel)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
+        let destinationIndexPath = coordinator.destinationIndexPath ?? IndexPath(item: 0, section: 0)
+        for item in coordinator.items {
+            if let sourceIndexPath = item.sourceIndexPath {
+                if let attributedString = item.dragItem.localObject as? NSAttributedString {
+                    collectionView.performBatchUpdates({
+                        emoji.remove(at: sourceIndexPath.item)
+                        emoji.insert(attributedString.string, at: destinationIndexPath.item)
+                        collectionView.deleteItems(at: [sourceIndexPath])
+                        collectionView.insertItems(at: [destinationIndexPath])
+                    })
+                    coordinator.drop(item.dragItem, toItemAt: destinationIndexPath)
+                }
+            }
+        }
+    }
+    
+    
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension CollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 100 , height: 100)
     }
@@ -65,44 +181,24 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(4.0)
+        return CGFloat(2.0)
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let tappedCell = collectionView.cellForItem(at:indexPath) as! EmojiCell
-        tappedCell.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 4, bottom: 10, right: 4)
     }
-    
+}
 
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
+extension Int {
+    var arc4Random: Int {
+        switch self {
+        case 1...Int.max:
+            return Int(arc4random_uniform(UInt32(self)))
+        case -Int.max..<0:
+            return Int(arc4random_uniform(UInt32(self)))
+        default:
+            return 0
+        }
+        
     }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }

@@ -49,7 +49,13 @@
                             <outlet property="delegate" destination="cHv-gX-JL7" id="Tnq-Ez-xTc"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Basic Collection View" id="krY-w9-X3k"/>
+                    <navigationItem key="navigationItem" title="Basic Collection View" id="krY-w9-X3k">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="NbZ-nY-wW3">
+                            <connections>
+                                <action selector="addNewEmojiButtonPressed:" destination="cHv-gX-JL7" id="H1o-W3-pk6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M77-bW-NIQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
