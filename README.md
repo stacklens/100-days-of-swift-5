@@ -7,6 +7,8 @@
 
 **More than 16 tiny projects to help you quickly learn how to build a simple iPhone app.**
 
+👉🏼*[中文传送门 / Chinese Version](README-CN.md)*👈🏼
+
 Similar with [samvlu's 100-days-of-swift.](http://samvlu.com/index.html), **but write by Swift 5.** Some resource comes from [Edison Hsu](https://github.com/Edison-Hsu/100-days-of-RxSwift).
 
 Code environment:
@@ -16,7 +18,7 @@ Code environment:
 - Simulator iPhone 11
 - IOS 13.2
 
-This project does not include an explanation of the basics of Swift. If you do not understand how the code works, please learn the following tutorial first:
+These projects does not include an explanation of the basics of Swift. If you do not understand how the code works, please learn the following tutorial first:
 
 - [The Swift Programming Language](https://swift.org/)
 - [Stanford CS193P Developing Applications for iOS](http://web.stanford.edu/class/cs193p/cgi-bin/drupal/)
@@ -58,6 +60,8 @@ What I Learned:
 ### Day 4 - Basic Table View
 
 ![gif](GIF/day4.gif)
+
+What I Learned:
 
 - Build Custom Table View Controller
 - Work with Nav Bar Buttons
