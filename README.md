@@ -175,3 +175,14 @@ What I Learned:
 - Create an Accessory Input View
 - Use icons for UIButtons
 - Pass data back to rootView
+
+## Day 17 - Basic Collection View
+
+![gif](GIF/day17.gif)
+
+What I Learned:
+
+- Baic using of UICollectionViewController
+- Drag and Drop in collection view
+- Change the layout of collection view
+- Basic animation
