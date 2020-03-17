@@ -9,7 +9,7 @@
 
 👉🏼 [中文传送门 / Chinese Version](README-CN.md) 👈🏼
 
-Similar with [samvlu's 100-days-of-swift.](http://samvlu.com/index.html), **but write by Swift 5.** Some resource comes from [Edison Hsu](https://github.com/Edison-Hsu/100-days-of-RxSwift).
+Similar with [samvlu's 100-days-of-swift](http://samvlu.com/index.html), **but write by Swift 5.** Some resource comes from [Edison Hsu](https://github.com/Edison-Hsu/100-days-of-RxSwift).
 
 Code environment:
 
@@ -198,3 +198,11 @@ What I Learned:
 What I Learned:
 
 - Pass data from collection to another view by drag and drop
+
+## Day 19 - Draw Something
+
+![gif](GIF/day19.gif)
+
+What I Learned:
+
+- Basic Drawing with CAShapeLayer and UIBezierPath
