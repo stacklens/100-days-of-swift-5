@@ -206,3 +206,12 @@ What I Learned:
 What I Learned:
 
 - Basic Drawing with CAShapeLayer and UIBezierPath
+
+## Day 20 -Animate It
+
+![gif](GIF/day20.gif)
+
+What I Learned:
+
+- Basic animation with CAAnimation && Transition && UIView.animate
+- Store local variables through closures

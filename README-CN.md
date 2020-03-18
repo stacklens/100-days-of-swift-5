@@ -204,3 +204,12 @@
 我学到了：
 
 - 基础绘图
+
+## Day 20 -Animate It
+
+![gif](GIF/day20.gif)
+
+我学到了：
+
+- 通过 CAAnimation && Transition && UIView.animate 实现动画效果
+- 通过闭包存储局部变量
