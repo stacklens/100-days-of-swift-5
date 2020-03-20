@@ -215,3 +215,12 @@ What I Learned:
 
 - Basic animation with CAAnimation && Transition && UIView.animate
 - Store local variables through closures
+
+## Day 21 - Tab Bar and Modal
+
+![git](GIF/day21.gif)
+
+What I Learned:
+
+- Basic use of Alert & ActionSheet & Popover
+- Pass data between tab with SceneDelegate

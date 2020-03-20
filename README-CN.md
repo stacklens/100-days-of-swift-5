@@ -213,3 +213,12 @@
 
 - 通过 CAAnimation && Transition && UIView.animate 实现动画效果
 - 通过闭包存储局部变量
+
+## Day 21 - Tab Bar and Modal
+
+![git](GIF/day21.gif)
+
+我学到了：
+
+- Alert & ActionSheet & Popover 的基本用法
+- 在 Tab 之间共享数据
