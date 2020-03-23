@@ -25,6 +25,8 @@ These projects does not include an explanation of the basics of Swift. If you do
 
 **Happy programming!**
 
+> Tips: It may cause compilation errors if the swift project folder contains spaces. so don't to do that. (I found it after Day 22 😭)
+>
 > The code is different from the samvlu's version because I write it myself. Obsolete projects have been deleted and similar projects have been merged together.
 
 
@@ -224,3 +226,17 @@ What I Learned:
 
 - Basic use of Alert & ActionSheet & Popover
 - Pass data between tab with SceneDelegate
+
+## Day 22 - Persistence And CoreData
+
+![gif](GIF/day22-1.gif)
+
+![gif](GIF/day22-2.gif)
+
+![png](GIF/day22-3.png)
+
+What I Learned:
+
+- Data Persistence by CoreData
+- CURD in CoreData
+- Popover in ios

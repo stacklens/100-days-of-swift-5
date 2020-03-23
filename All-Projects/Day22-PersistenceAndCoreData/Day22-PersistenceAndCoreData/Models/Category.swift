@@ -51,4 +51,16 @@ class Category: NSManagedObject {
             }
         }
     }
+    
+    static func update(in context: NSManagedObjectContext, obj: Category, title: String) -> Category {
+        obj.title = title
+        context.performAndWait {
+            do {
+                try context.save()
+            } catch {
+                print("Category - static func update - \(error)")
+            }
+        }
+        return obj
+    }
 }

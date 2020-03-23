@@ -23,6 +23,8 @@
 
 **编程愉快**
 
+> 小提示：如果 swift 工程文件夹中包含空格，可能导致某些编译错误，所以建议读者不要这样做。（我在完成 Day 22 时发现了这个问题 😢）
+>
 > 项目代码与 samvlu 的有所区别，因为我是完全自己写的。废弃了部分过时的项目、合并了相似的项目。
 
 
@@ -222,3 +224,17 @@
 
 - Alert & ActionSheet & Popover 的基本用法
 - 在 Tab 之间共享数据
+
+## Day 22 - Persistence And CoreData
+
+![gif](GIF/day22-1.gif)
+
+![gif](GIF/day22-2.gif)
+
+![png](GIF/day22-3.png)
+
+我学到了：
+
+- 用 CoreData 进行数据持久化
+- 数据增删改查
+- 在 ios 中的弹出层

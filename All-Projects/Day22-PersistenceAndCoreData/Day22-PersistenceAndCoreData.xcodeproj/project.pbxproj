@@ -17,6 +17,8 @@
 		49BC1FC524273DF200827C29 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC1FC424273DF200827C29 /* Item.swift */; };
 		49BC1FC924273EED00827C29 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC1FC824273EED00827C29 /* CategoryTableViewController.swift */; };
 		49BC1FCB2427502C00827C29 /* CategoryPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC1FCA2427502C00827C29 /* CategoryPopoverViewController.swift */; };
+		49BC1FCF2427A9C600827C29 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC1FCE2427A9C600827C29 /* ItemTableViewController.swift */; };
+		49BC1FD124296D4300827C29 /* Extension+Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC1FD024296D4300827C29 /* Extension+Number.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		49BC1FC424273DF200827C29 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		49BC1FC824273EED00827C29 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		49BC1FCA2427502C00827C29 /* CategoryPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPopoverViewController.swift; sourceTree = "<group>"; };
+		49BC1FCE2427A9C600827C29 /* ItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
+		49BC1FD024296D4300827C29 /* Extension+Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Number.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 				49BC1FB624273D2400827C29 /* Assets.xcassets */,
 				49BC1FB824273D2400827C29 /* LaunchScreen.storyboard */,
 				49BC1FBB24273D2400827C29 /* Info.plist */,
+				49BC1FD024296D4300827C29 /* Extension+Number.swift */,
 			);
 			path = "Day22-PersistenceAndCoreData";
 			sourceTree = "<group>";
@@ -91,6 +96,7 @@
 			children = (
 				49BC1FC824273EED00827C29 /* CategoryTableViewController.swift */,
 				49BC1FCA2427502C00827C29 /* CategoryPopoverViewController.swift */,
+				49BC1FCE2427A9C600827C29 /* ItemTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -175,11 +181,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				49BC1FC924273EED00827C29 /* CategoryTableViewController.swift in Sources */,
+				49BC1FD124296D4300827C29 /* Extension+Number.swift in Sources */,
 				49BC1FC324273DE000827C29 /* Category.swift in Sources */,
 				49BC1FB524273D2000827C29 /* Day22_PersistenceAndCoreData.xcdatamodeld in Sources */,
 				49BC1FAB24273D2000827C29 /* AppDelegate.swift in Sources */,
 				49BC1FC524273DF200827C29 /* Item.swift in Sources */,
 				49BC1FAD24273D2000827C29 /* SceneDelegate.swift in Sources */,
+				49BC1FCF2427A9C600827C29 /* ItemTableViewController.swift in Sources */,
 				49BC1FCB2427502C00827C29 /* CategoryPopoverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
