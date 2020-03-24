@@ -240,3 +240,13 @@ What I Learned:
 - Data Persistence by CoreData
 - CURD in CoreData
 - Popover in ios
+
+## Day 23 - Into The Dark
+
+![gif](GIF/day23.gif)
+
+What I Learned:
+
+- Change Interface style by code
+- Use Semantic Colors
+- Custom dynamic Colors
