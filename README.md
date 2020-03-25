@@ -250,3 +250,12 @@ What I Learned:
 - Change Interface style by code
 - Use Semantic Colors
 - Custom dynamic Colors
+
+## Day 24 - Local Notification
+
+![gif](GIF/day24.gif)
+
+What I Learned:
+
+- Basic use of Local notification
+- Local notification with actions
